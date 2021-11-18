@@ -1,0 +1,37 @@
+pipeline{
+
+    agent {
+        label 'eggtimer'
+    }
+
+    stages{
+        stage('checkout'){
+               steps{
+                  git branch: 'main',
+                  credentialsId: 'GithubAccount',
+                  url: 'https://github.com/itssidhu-makha/eggtimerproject.git'
+               }
+        }
+        stage('build'){
+            steps{
+                bat 'mvn clean compile'
+            }
+        }
+
+        stage('test'){
+                    steps{
+                        bat 'mvn test'
+
+                    }
+        }
+
+        stage('send email'){
+            steps{
+            emailext body: '''Hi Dear,
+            Egg timer tests passed- pleaase check reports or jenkins job for results''',
+            subject: 'Egg Timer Test', to: 'itssidhu1989@gmail.com'
+            }
+        }
+    }
+
+}

@@ -43,4 +43,11 @@
     1. 10000 returns 2 hours
     2. 9600 returns 7569 years
     3. 1000000000 returns blank
+
+# Jenkins
+    1. Jenkins Linter to validate the pipeline
+    2. Jenkins.yml contains the container mappings - No need to install Jenkins into the system. Mapping of volume shoudl be done to save data
+    3. JenkinsFile has the basic build and compile and run stages on agent with label eggtimer
+
+
     

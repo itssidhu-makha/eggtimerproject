@@ -6,3 +6,5 @@
 !.gitignore
 !Readme.md
 !runMe.bat
+!jenkins.yml
+!JenkinsFile

@@ -34,7 +34,7 @@
     3. Maven should be installed
     4. Docker should be installed on WSL2/WSL1
 
-#Improvement
+# Improvement
     1. Better approach to test this could have been vis Cypress or TestNG
     2. Reports can be further extended to every step or scenario. At moment it does basic reporting
     3. Facility to run every scenario can also be provided
